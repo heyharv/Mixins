@@ -8,7 +8,7 @@ module.exports = function(grunt) {
       },
       dist: {
         options: {
-          outputStyle: 'compressed',
+          outputStyle: 'expanded',
           sourceMap: true,
         },
         files: {
@@ -34,6 +34,8 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+
 
   grunt.registerTask('build', ['sass']);
   grunt.registerTask('default', ['build','watch']);
